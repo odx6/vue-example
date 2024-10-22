@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="main">
+   <h1 v-show="conectado">directiva show</h1>
+   <h1 v-if="conectado">directiva if </h1>
+   <h1 v-if="edad >=18">puedes entrar </h1>
+   <h1 v-else>No puedes entrar  </h1>
+   <h2>Renderizado de listas o array</h2>
+   <ul>
+    <li v-for="item in lista ">{{item}}</li>
+   </ul>
+   <h2>Renderizado de lista de objetos </h2>
+   <ul>
+    <li v-for="item in listaDePersonas ">{{item.nombre}}--{{item.Edad}}  {{item.sexo}}</li>
+   </ul>
+</div>
+     
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
