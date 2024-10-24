@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos </title>
+  <style>
+    .completado {
+      text-decoration: line-through;
+      color: red
+    }
+    .aparecer-enter{
+      opacity: 0;
+    }
+    .aparecer-enter-active{
+      transition: opacity 1s;
+    }
+    .aparecer-leave-to{
+      opacity: 0;
+    }
+    .aparecer-leave-active{
+      transition: opacity 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Lista de user </h1>
+     <ul>
+      <li v-for="persona in personas">
+         {{persona.name}}
+
+      </li>
+     </ul>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="found.js"></script>
+</body>
+
+</html>

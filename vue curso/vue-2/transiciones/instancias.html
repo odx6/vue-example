@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos </title>
+  <style>
+    .completado {
+      text-decoration: line-through;
+      color: red
+    }
+    .aparecer-enter{
+      opacity: 0;
+    }
+    .aparecer-enter-active{
+      transition: opacity 1s;
+    }
+    .aparecer-leave-to{
+      opacity: 0;
+    }
+    .aparecer-leave-active{
+      transition: opacity 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Listado de tareas</h1>
+    <button @click="btnMostrar">aparecer/ocultar</button>
+    <transition name="aparecer">
+      <ul v-if="mostrar">
+        <li v-bind:class="{completado:item.completado}" @click="completarTarea(item)" v-for="item in tareas">
+          {{item.titulo}}</li>
+      </ul>
+    </transition>
+
+    <hr>
+    <pre>
+      {{tareas}}
+    </pre>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <script src="found.js"></script>
+</body>
+
+</html>

@@ -5,13 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos </title>
+  <style>
+    .completado{
+      text-decoration: line-through;
+      color:red
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
     <h1>Listado de tareas</h1>
     <ul>
-      <li  @:@click="completarTarea(tarea)"
+      <li  v-bind:class="{completado:item.completado}"
+       @click="completarTarea(item)"
       
       v-for="item in tareas">{{item.titulo}}</li>
     </ul>
