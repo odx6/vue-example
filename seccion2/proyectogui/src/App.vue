@@ -8,6 +8,17 @@
      <MiPersona nombre="Ever" edad="30"></MiPersona>
       <MisUsuarios  v-for="usuario in usuarios" v-bind:key="usuario.id" :nombre="usuario.name" :email="usuario.email" :telefono="usuario.phone"></MisUsuarios>
       <hr>
+
+      <ComponenteSlot>
+      Hola como estas modificando desde el slot
+      <template slot="slotdos">
+      Hola desde app slot 2
+      </template>
+      <template slot="slottres">
+      Hola desde app slot 3
+      </template>
+      </ComponenteSlot>
+      <ComponentePadre></ComponentePadre>
     
 
   </div>
@@ -18,6 +29,8 @@ import MiSaludo from "./components/MiSaludo";
 import ComponenteDos from "./components/ComponenteDos";
 import MiPersona from "./components/MiPersona";
 import MisUsuarios from "./components/MisUsuarios";
+import ComponenteSlot from "./components/ComponenteSlot";
+import ComponentePadre from "./components/ComponentePadre";
 import axios from 'axios'
 
 export default {
@@ -27,6 +40,8 @@ export default {
     ComponenteDos,
     MiPersona,
     MisUsuarios,
+    ComponenteSlot,
+    ComponentePadre,
   },
   data(){
 
