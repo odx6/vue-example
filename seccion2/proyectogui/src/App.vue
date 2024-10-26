@@ -19,6 +19,12 @@
       </template>
       </ComponenteSlot>
       <ComponentePadre></ComponentePadre>
+      <MiElemento tipo="h1">Texto para el elemento h1</MiElemento>
+      <MiElemento tipo="h2">Texto para el elemento h2</MiElemento>
+      <MiElemento tipo="h3">Texto para el elemento h3</MiElemento>
+      <MiElemento tipo="aside">Contenido aside </MiElemento>
+      
+
     
 
   </div>
@@ -31,6 +37,7 @@ import MiPersona from "./components/MiPersona";
 import MisUsuarios from "./components/MisUsuarios";
 import ComponenteSlot from "./components/ComponenteSlot";
 import ComponentePadre from "./components/ComponentePadre";
+import MiElemento from "./components/MiElemento";
 import axios from 'axios'
 
 export default {
@@ -42,6 +49,7 @@ export default {
     MisUsuarios,
     ComponenteSlot,
     ComponentePadre,
+    MiElemento,
   },
   data(){
 
